@@ -13,60 +13,60 @@ public class Resources {
 
     static String admin = "{\"username\":\"admin\",\"email\":\"admin@e199.gr\","
             + "\"password\":\"admiN12@*\","
-            + "\"firstname\":\"Admin\",\"lastname\":\"Adminakis\","
+            + "\"firstname\":\"Admin\",\"lastname\":\"Admin\","
             + "\"birthdate\":\"1980-06-03\",\"gender\":\"Male\",\"afm\":\"1234554321\","
             + "\"country\":\"Greece\",\"address\":\"Pl. Kiprou 5, Iraklio 713 06\",\"municipality\":\"Heraklion\",\"prefecture\":\"Heraklion\",\"lat\":\"35.3332276\","
             + "\"lon\":\"25.1162213\",\"telephone\":\"2813407000\","
             + "\"job\":\"Firemen\"}";
 
-    static String user1JSON = "{\"username\":\"mountanton\",\"email\":\"mike@csd.uoc.gr\",\"password\":\"ab$A12cde\","
-            + "\"firstname\":\"Michalis\",\"lastname\":\"Mountantonakis\",\"birthdate\":\"1992-06-03\",\"gender\":\"Male\",\"afm\":\"1238585123\","
+    static String user1JSON = "{\"username\":\"userone\",\"email\":\"userone@example.com\",\"password\":\"ab$A12cde\","
+            + "\"firstname\":\"Andreas\",\"lastname\":\"Papadopoulos\",\"birthdate\":\"1992-06-03\",\"gender\":\"Male\",\"afm\":\"1238585123\","
             + "\"country\":\"Greece\",\"address\":\"CSD Voutes\",\"municipality\":\"Heraklion\",\"prefecture\":\"Heraklion\",\"lat\":\"35.3053121\","
             + "\"lon\":\"25.0722869\",\"telephone\":\"1234567890\","
             + "\"job\":\"Researcher\"}";
 
-    static String user2JSON = "{\"username\":\"tsitsip\",\"email\":\"tsitsipas@tuc.gr\",\"password\":\"ab$A12cde\","
-            + "\"firstname\":\"Stefanos\",\"lastname\":\"Tsitsipas\",\"birthdate\":\"1998-08-12\",\"gender\":\"Male\",\"afm\":\"2525252525\","
+    static String user2JSON = "{\"username\":\"usertwo\",\"email\":\"usertwo@example.com\",\"password\":\"ab$A12cde\","
+            + "\"firstname\":\"Eleni\",\"lastname\":\"Nikolaou\",\"birthdate\":\"1998-08-12\",\"gender\":\"Female\",\"afm\":\"2525252525\","
             + "\"country\":\"Greece\",\"address\":\"Dimokratias 99\",\"municipality\":\"Heraklion\",\"prefecture\":\"Heraklion\",\"lat\":\"35.3401097\","
             + "\"lon\":\"25.1562301\",\"telephone\":\"6911111122\","
-            + "\"job\":\"Twitter/Tennis\"}";
+            + "\"job\":\"Engineer\"}";
 
-    static String user3JSON = "{\"username\":\"csdasbest\",\"email\":\"csdas@uoc.gr\",\"password\":\"ab$A12cde\","
-            + "\"firstname\":\"Mary\",\"lastname\":\"Tsipaki\",\"birthdate\":\"1981-11-12\",\"gender\":\"Female\",\"afm\":\"1579991110\","
+    static String user3JSON = "{\"username\":\"userthree\",\"email\":\"userthree@example.com\",\"password\":\"ab$A12cde\","
+            + "\"firstname\":\"Dimitris\",\"lastname\":\"Alexandrou\",\"birthdate\":\"1981-11-12\",\"gender\":\"Male\",\"afm\":\"1579991110\","
             + "\"country\":\"Greece\",\"address\":\"Limenas Chersonisou\",\"municipality\":\"Hersonissos\",\"prefecture\":\"Heraklion\",\"lat\":\"35.318761\","
             + "\"lon\":\"25.3715371\",\"telephone\":\"6977889900\","
-            + "\"job\":\"compilers project manager\"}";
+            + "\"job\":\"Project Manager\"}";
     
-    static String user4JSON = "{\"username\":\"tympaki\",\"email\":\"tympakianos@uoc.gr\",\"password\":\"ab$A12cde\","
-            + "\"firstname\":\"Georgos\",\"lastname\":\"Niktaris\",\"birthdate\":\"2003-07-12\",\"gender\":\"Male\",\"afm\":\"1179991110\","
+    static String user4JSON = "{\"username\":\"userfour\",\"email\":\"userfour@example.com\",\"password\":\"ab$A12cde\","
+            + "\"firstname\":\"Katerina\",\"lastname\":\"Vasileiou\",\"birthdate\":\"2003-07-12\",\"gender\":\"Female\",\"afm\":\"1179991110\","
             + "\"country\":\"Greece\",\"address\":\"I. Koriotaki\",\"municipality\":\"Faistos\",\"prefecture\":\"Heraklion\",\"lat\":\"35.0722851\","
             + "\"lon\":\"24.7588403\",\"telephone\":\"6977880000\","
-            + "\"job\":\"farmer\"}";
+            + "\"job\":\"Farmer\"}";
     
     
-    static String volunteer1JSON = "{\"username\":\"raphael\",\"email\":\"raphael@gmail.gr\",\"password\":\"ab$A12cde\","
-            + "\"firstname\":\"Raphael\",\"lastname\":\"Papadopoulos\",\"birthdate\":\"1992-08-12\",\"gender\":\"Male\",\"afm\":\"1234567891\","
+    static String volunteer1JSON = "{\"username\":\"volone\",\"email\":\"volone@example.com\",\"password\":\"ab$A12cde\","
+            + "\"firstname\":\"Georgios\",\"lastname\":\"Ioannou\",\"birthdate\":\"1992-08-12\",\"gender\":\"Male\",\"afm\":\"1234567891\","
             + "\"country\":\"Greece\",\"address\":\"El. Venizelou 160, Malia\",\"municipality\":\"Hersonissos\",\"prefecture\":\"Heraklion\",\"lat\":\"35.2836391\","
             + "\"lon\":\"25.4600817\",\"telephone\":\"6988877755\","
-            + "\"job\":\"taxi driver\",\"volunteer_type\":\"driver\",\"height\":\"1.80\",\"weight\":\"90.0\"}";
+            + "\"job\":\"Taxi Driver\",\"volunteer_type\":\"driver\",\"height\":\"1.80\",\"weight\":\"90.0\"}";
 
-    static String volunteer2JSON = "{\"username\":\"nick\",\"email\":\"nick@gmail.gr\",\"password\":\"ab$A12cde\","
-            + "\"firstname\":\"Nick\",\"lastname\":\"Georgakopoulos\",\"birthdate\":\"1988-08-12\",\"gender\":\"Male\",\"afm\":\"1234567891\","
+    static String volunteer2JSON = "{\"username\":\"voltwo\",\"email\":\"voltwo@example.com\",\"password\":\"ab$A12cde\","
+            + "\"firstname\":\"Panagiotis\",\"lastname\":\"Christodoulou\",\"birthdate\":\"1988-08-12\",\"gender\":\"Male\",\"afm\":\"1234567891\","
             + "\"country\":\"Greece\",\"address\":\"Evans 124\",\"municipality\":\"Heraklion\",\"prefecture\":\"Heraklion\",\"lat\":\"35.2976896\","
             + "\"lon\":\"25.0806272\",\"telephone\":\"6978912345\","
-            + "\"job\":\"barista\",\"volunteer_type\":\"simple\",\"height\":\"1.99\",\"weight\":\"112.5\"}";
+            + "\"job\":\"Barista\",\"volunteer_type\":\"simple\",\"height\":\"1.99\",\"weight\":\"112.5\"}";
 
-    static String volunteer3JSON = "{\"username\":\"mary\",\"email\":\"mary@gmail.gr\",\"password\":\"ab$A12cde\","
-            + "\"firstname\":\"Maria\",\"lastname\":\"Vlahaki\",\"birthdate\":\"1992-11-12\",\"gender\":\"Male\",\"afm\":\"8882223335\","
+    static String volunteer3JSON = "{\"username\":\"volthree\",\"email\":\"volthree@example.com\",\"password\":\"ab$A12cde\","
+            + "\"firstname\":\"Sophia\",\"lastname\":\"Dimitriou\",\"birthdate\":\"1992-11-12\",\"gender\":\"Female\",\"afm\":\"8882223335\","
             + "\"country\":\"Greece\",\"address\":\"Stalida\",\"municipality\":\"Hersonissos\",\"prefecture\":\"Heraklion\",\"lat\":\"35.2908868\","
             + "\"lon\":\"25.4600817\",\"telephone\":\"6977777777\","
-            + "\"job\":\"receptionist\",\"volunteer_type\":\"simple\",\"height\":\"1.70\",\"weight\":\"60.0\"}";
+            + "\"job\":\"Receptionist\",\"volunteer_type\":\"simple\",\"height\":\"1.70\",\"weight\":\"60.0\"}";
 
-    static String volunteer4JSON = "{\"username\":\"papas\",\"email\":\"papas@gmail.gr\",\"password\":\"ab$A12cde\","
-            + "\"firstname\":\"Mike\",\"lastname\":\"Pappas\",\"birthdate\":\"1978-08-12\",\"gender\":\"Male\",\"afm\":\"7899991112\","
+    static String volunteer4JSON = "{\"username\":\"volfour\",\"email\":\"volfour@example.com\",\"password\":\"ab$A12cde\","
+            + "\"firstname\":\"Nikolaos\",\"lastname\":\"Konstantinou\",\"birthdate\":\"1978-08-12\",\"gender\":\"Male\",\"afm\":\"7899991112\","
             + "\"country\":\"Greece\",\"address\":\"Kondylaki 88\",\"municipality\":\"Heraklion\",\"prefecture\":\"Heraklion\",\"lat\":\"35.3295412\","
             + "\"lon\":\"25.1185202\",\"telephone\":\"6991234567\","
-            + "\"job\":\"dikigoros\",\"volunteer_type\":\"driver\",\"height\":\"1.69\",\"weight\":\"78.5\"}";
+            + "\"job\":\"Dikigoros\",\"volunteer_type\":\"driver\",\"height\":\"1.69\",\"weight\":\"78.5\"}";
 
     
     static String incident1 = "{\"incident_type\":\"fire\","
@@ -141,5 +141,5 @@ public class Resources {
 
     static String message2 = "{\"incident_id\":\"1\","
             + "\"message\":\"Uparxei kindunos me ladia\","
-            + "\"sender\":\"raphael\"," + "\"recipient\":\"public\"}";
+            + "\"sender\":\"volone\"," + "\"recipient\":\"public\"}";
 }

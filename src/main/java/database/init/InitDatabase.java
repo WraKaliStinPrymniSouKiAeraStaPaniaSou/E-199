@@ -110,7 +110,7 @@ public class InitDatabase {
     public void databaseToJSON() throws ClassNotFoundException, SQLException {
         // Get info of User
         EditUsersTable eut = new EditUsersTable();
-        User su = eut.databaseToUsers("mountanton", "ab$A12cde");
+        User su = eut.databaseToUsers("userone", "ab$A12cde");
         String json = eut.userToJSON(su);
         System.out.println("User\n" + json + "\n");
 
@@ -139,20 +139,20 @@ public class InitDatabase {
         System.out.println("All messages of Incident with ID " + incident_id + "\n" + messagesOfIncidentJSON + "\n");
 
         CheckForDuplicatesExample check = new CheckForDuplicatesExample();
-        System.out.println("Is username:" + "Mitsos" + " Available? " + check.isUserNameAvailable("mitsos"));
+        System.out.println("Is username:" + "TestUser" + " Available? " + check.isUserNameAvailable("testuser"));
 
-        System.out.println("Is username:" + "mountanton" + " Available? " + check.isUserNameAvailable("mountanton"));
-        System.out.println("Is username:" + "nick" + " Available? " + check.isUserNameAvailable("nick"));
+        System.out.println("Is username:" + "userone" + " Available? " + check.isUserNameAvailable("userone"));
+        System.out.println("Is username:" + "voltwo" + " Available? " + check.isUserNameAvailable("voltwo"));
 
         System.out.println("databaseToJSON");
     }
 
     public void updateRecords() throws ClassNotFoundException, SQLException {
         EditUsersTable editUsers = new EditUsersTable();
-        editUsers.updateUser("mountanton", "job", "Professor");
+        editUsers.updateUser("userone", "job", "Professor");
 
         EditParticipantsTable editParticipants = new EditParticipantsTable();
-        editParticipants.acceptParticipant(3, "raphael");
+        editParticipants.acceptParticipant(3, "volone");
         editParticipants.finalStatusParticipant(3, "yes", "Voithise para polu");
         EditIncidentsTable editIncidents = new EditIncidentsTable();
         HashMap<String, String> updateIncident1 = new HashMap<String, String>();
