@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The admin updates an incident</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/E-199/css/Initial_Page.css">
+    </head>
+    <body>
+        <div class="menu">
+            <form id="form" class="Form">
+                <!-- Select an incident -->
+                <label for="RunningIncidents">Select an active event:</label>
+                <select id="RunningIncidents" style="width: 80%;" required>
+                    <option value="" selected hidden>choose an incident</option>
+                </select>
+              
+                <!-- The incident's details (hidden at first) -->
+                <div id="IncidentDetails" style="display: none; margin-top: 10px;">
+                    <!-- Status -->
+                    <label for="status">Status:</label>
+                    <select id="status" required>
+                        <option value="" selected hidden>choose a status</option>
+                        <option value="running">Running</option>
+                        <option value="finished">Finished</option>
+                        <option value="fake">Fake</option>
+                    </select>
+                    <br><br>
+                    
+                    <!-- Danger -->
+                    <label for="danger">Danger Level:</label>
+                    <select id="danger" required>
+                        <option value="" selected hidden>choose a status</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <br><br>
+                    
+                    <!-- Vehicles -->
+                    <label for="vehicles">Vehicles:</label>
+                    <input type="number" id="vehicles" min="0" title="Please enter a positive number"  placeholder="Number of vehicles" required>
+                    <br><br>
+                    
+                    <!-- Firemen -->
+                    <label for="firemen">Firemen:</label>
+                    <input type="number" id="firemen" min="0" title="Please enter a positive number" placeholder="Number of firemen" required>
+                    <br><br>
+                    
+                    <!-- submit -->
+                    <button id="submit" class="extraButtons" type="submit">Submit</button>
+                    <br><br>
+                    <span id="submit_message"></span>
+                </div>
+            </form>
+        </div>
+        
+        <!-- JavaScript File -->
+        <script src="/E-199/js/admin_UpdateAnIncident.js"></script>
+    </body>
+</html>

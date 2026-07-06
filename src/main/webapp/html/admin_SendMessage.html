@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin sends message</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/E-199/css/Initial_Page.css">
+    </head>
+    <body>
+        <div class="menu2">
+            <!-- Send a message -->
+            <div class="menu">
+                <h3>Send a message about an event if you like:</h3>
+                
+                <form id="form" class="Form">
+                    <!-- Select an incident -->
+                    <label for="RunningIncidents">Select an active event:</label>
+                    <select id="RunningIncidents" required>
+                        <option value="" selected hidden>choose an incident</option>
+                    </select>
+                    <br><br>
+                
+                    <!-- Send a message -->
+                    <textarea name="description" id="description" rows="7" cols="50" placeholder="Send a message about an incident." required></textarea>
+                    <br><br>
+                
+                    <!-- Submit -->
+                    <button id="submit" class="extraButtons" type="submit">Submit</button>
+                    <span id="submit_message"></span>
+                </form>    
+            </div>
+            
+            <!-- View messages -->
+            <div class="menu">
+                <h3>Here is a list of all the active incidents:</h3>
+                
+                <div class="List">
+                    <ul id="RunningIncidentsList"></ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- JavaScript files -->
+        <script src="/E-199/js/admin_SendMessage.js"></script>
+        <script src="/E-199/js/UserSessionTimeout.js"></script>
+    </body>
+</html>

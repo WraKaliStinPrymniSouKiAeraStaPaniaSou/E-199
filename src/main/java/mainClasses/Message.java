@@ -1,0 +1,35 @@
+package mainClasses;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Message {
+    int message_id, incident_id;
+    String message, date_time, sender, recipient;
+
+    // Getters and Setters
+    public int getMessage_id() { return message_id; }
+    public void setMessage_id(int message_id) { this.message_id = message_id; }
+
+    public int getIncident_id() { return incident_id; }
+    public void setIncident_id(int incident_id) { this.incident_id = incident_id; }
+
+    public String getMessage() { return message; }
+    public void setMessage(String message) { this.message = message; }
+
+    public String getDate_time() { return date_time; }
+    public void setDate_time() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        date_time=dtf.format(now);
+    }
+    public void setExistedMessageDateTime(String date_time) {
+        this.date_time = date_time;
+    }
+
+    public String getSender() { return sender; }
+    public void setSender(String sender) { this.sender = sender; }
+    
+    public String getRecipient() { return recipient; }
+    public void setRecipient(String recipient) { this.recipient = recipient; }
+}

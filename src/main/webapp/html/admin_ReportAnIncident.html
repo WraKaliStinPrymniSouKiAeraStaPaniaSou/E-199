@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Reports An Incident</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="menu">
+           <h1>Report the incident please!</h1>
+           <form id="ReportIncidentForm" class="Form">
+               <!-- Type of the incident -->
+               <label for="incident_type">Incident Type*</label>
+               <select name="incident_type" id="incident_type" required>
+                    <option value="" style="display:none;">choose the type</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Accident">Accident</option>
+                    <option value="Flood">Flood</option>
+                    <option value="Earthquake">Earthquake</option>
+                </select>
+               
+               <!-- Description of the incident -->
+               <label for="description">Describe the incident</label>
+               <textarea name="description" id="description" rows="5" cols="50" placeholder="Decribe the incident..."></textarea> 
+               
+               <!-- User's phone -->
+               <label for="user_phone">Phone Number</label>
+               <input type="tel" name="user_phone" id="user_phone" pattern="[0-9]{10}" title="This field is not required, we already have the phone number you registered with:)" placeholder="0123456789">
+               
+               <!-- Municipality of the address -->
+               <label for="municipality">Municipality</label>
+               <input type="text" name="municipality" id="municipality" pattern="[A-Za-zΑ-Ωα-ω]{3,30}" title="Please write the municipality of the accident">
+               
+               <!-- Incident's address -->
+               <label for="address">Address*</label>
+               <input type="text" name="address" id="address" pattern=".{10,150}" title="Please write the incident's address." required>
+               
+                <!-- Prefecture -->
+                <label for="Prefecture">Prefecture</label>
+                <select name="prefecture" id="prefecture">
+                    <option value="" style="display: none;">chooce a prefecture</option>
+                    <option value="Chania">Chania</option>
+                    <option value="Rethymno">Rethymno</option>
+                    <option value="Heraklion">Heraklion</option>
+                    <option value="Agios-Nikolaos">Agios Nikolaos</option>
+                </select>
+               
+                <!-- Danger rate of the incident -->
+                <label for="danger">Incident danger rate*</label>
+                <select name="danger" id="danger" required>
+                    <option value="" style="display:none;">choose the danger rate</option>
+                    <option value="low">low</option>
+                    <option value="medium">medium</option>
+                    <option value="high">high</option>
+                    <option value="unknown">unknown</option>
+                </select>
+                
+                <!-- Submit -->
+                <button id="submit" class="extraButtons" type="submit">Submit</button>
+                <span id="submit_message"></span>
+           </form>
+        </div>
+    </body>
+</html>

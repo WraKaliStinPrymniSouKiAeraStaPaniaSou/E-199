@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Manage Data</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/E-199/css/Initial_Page.css">
+        <style>
+            .data-section { margin: 20px 0; text-align: left; }
+            .data-section h2 { cursor: pointer; }
+            .data-section h2:hover { color: #ff7043; }
+            table { width: 100%; border-collapse: collapse; margin: 10px 0 30px 0; font-size: 12px; background: rgb(60,40,25); border-radius: 5px; }
+            th, td { padding: 6px 8px; text-align: left; border-bottom: 1px solid rgb(90,56,35); }
+            th { background: #6b4423; color: rgb(210,180,140); }
+            td { color: #ddd; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+            .delete-btn { padding: 3px 10px; font-size: 12px; color: white; background-color: #d32f2f; border: none; border-radius: 3px; cursor: pointer; }
+            .delete-btn:hover { background-color: #b71c1c; }
+            .loading { color: rgb(210,180,140); text-align: center; padding: 20px; }
+            .scroll-wrap { overflow-x: auto; }
+            .count-badge { font-size: 14px; color: #ff7043; }
+        </style>
+    </head>
+    <body>
+        <div class="menu">
+            <h1>Manage Database Records</h1>
+            <span id="message" style="color: #ff7043;"></span>
+
+            <div id="tables-container"></div>
+        </div>
+
+        <script src="/E-199/js/admin_ManageData.js"></script>
+    </body>
+</html>

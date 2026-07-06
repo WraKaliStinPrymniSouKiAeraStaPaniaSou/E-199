@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>admin page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/E-199/css/Initial_Page.css">
+    </head>
+    <body>
+        <nav class="Navbar">
+            <button id="LogoutButton" class="extraButtons">Logout</button>
+        </nav>
+        
+        <div class="menu">
+            <h1>Welcome Admin</h1>
+           
+            <div class="buttons_container">
+                <button id="CreateDatabase">Create Database</button>
+                <button id="DeleteDatabase">Delete Database</button>
+            </div>
+            
+            <div class="buttons_container">
+                <!-- The admin uses the html of the user to report an incident -->
+                <button id="ReportIncident" onclick="window.location.href='/E-199/html/ConnectedUser_ReportAnIncident.html'">Report an incident</button>
+                <button id="UpdateIncident" onclick="window.location.href='/E-199/html/admin_UpdateAnIncident.html'">Update an incident</button>
+                <button id="OpenNewPositions" onclick="window.location.href='/E-199/html/admin_OpenNewPositions.html'">Open new job positions</button>
+                <button id="AcceptVolunteersRequest" onclick="window.location.href='/E-199/html/admin_AcceptVolunteersRequest.html'">Accept Requests</button>
+                <button id="SendMessage" onclick="window.location.href='/E-199/html/admin_SendMessage.html'">Send Message</button>
+                <button id="ViewStatistics" onclick="window.location.href='/E-199/html/admin_ViewStatistics.html'">View Statistics</button>
+                <button id="ManageData" onclick="window.location.href='/E-199/html/admin_ManageData.html'" style="background-color:#d32f2f;color:white;">Manage Data</button>
+            </div>
+            
+            <!-- Database message -->
+            <span id="DatabaseMessage"></span>
+                      
+            <div class="image_E199">
+                <img src="/E-199/img/firefighter.jpg" alt="firefighter">
+            </div>
+        </div> 
+        
+        <!-- JavaScript files -->
+        <script src="/E-199/js/admin.js"></script>
+    </body>
+</html>

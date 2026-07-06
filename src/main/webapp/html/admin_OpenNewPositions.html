@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin opens new job positions</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/E-199/css/Initial_Page.css">
+    </head>
+    <body>
+        <div class="menu">
+            <h1>Create new jobs for participants</h1>
+            
+            <form id="form" class="Form">
+                <!-- Select an incident -->
+                <label for="RunningIncidents">Select an active event:</label>
+                <select id="RunningIncidents" style="width: 80%;" required>
+                    <option value="" selected hidden>choose an incident</option>
+                </select>
+                
+                <!-- select the number of the volunteers you need --> 
+                <label for="positions">Number of Positions:</label>
+                <input type="number" id="positions" name="positions" min="1" required>
+                <br><br>
+                
+                <!-- submit -->
+                <button id="submit" class="extraButtons" type="submit">Submit</button>
+                <br><br>
+                <span id="submit_message"></span>
+            </form>
+        </div>
+        
+        <!-- JavaScript File -->
+        <script src="/E-199/js/admin_OpenNewPositions.js"></script>
+    </body>
+</html>

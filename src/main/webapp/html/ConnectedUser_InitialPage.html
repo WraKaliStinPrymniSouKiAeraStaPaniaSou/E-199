@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Connected User initial page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/E-199/css/Initial_Page.css">
+    </head>
+    <body>
+        <nav class="Navbar">
+            <button id="LogoutButton" class="extraButtons">Logout</button>
+        </nav>
+        
+        <div class="menu">
+            <h1>Welcome</h1>
+            <h3>What would you like to do today?</h3>
+            
+            <div class="buttons_container">
+                <button id="UpdateInfo" onclick="window.location.href='/E-199/html/ConnectedUser_UpdateInfo.html'">Update your information</button>
+                <button id="ReportIncident" onclick="window.location.href='/E-199/html/ConnectedUser_ReportAnIncident.html'">Report an incident</button>
+                <button id="SendMessage" onclick="window.location.href='/E-199/html/ConnectedUser_SendMessage.html'">Send a message about an incident</button>
+                <button id="ViewActiveIncidents" onclick="window.location.href='/E-199/html/ConnectedUser_ViewActiveIncidents.html'">View active incidents</button>
+            </div>
+        </div>
+        
+         <!-- footer -->
+        <footer id="footer"></footer>
+       
+        <!-- JavaScript files -->
+        <script src="/E-199/js/ConnectedUser_InitialPage.js"></script>
+        <script src="/E-199/js/UserSessionTimeout.js"></script>
+        <script src="/E-199/js/footer.js"></script>
+    </body>
+</html>

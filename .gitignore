@@ -1,0 +1,11 @@
+.env
+target/
+*.class
+*.war
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store

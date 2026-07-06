@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/E-199/css/Initial_Page.css">
+    </head>
+    <body>
+        <nav class="Navbar">
+            <button id="LogoutButton" class="extraButtons">Logout</button>
+        </nav>
+        
+        <div class="menu">
+            <h1>Welcome</h1>
+            <h3>What would you like to do today?</h3>
+            
+            <div class="buttons_container">
+                <button id="UpdateInfo" onclick="window.location.href='/E-199/html/ConnectedVolunteer_UpdateInfo.html'">Update your information</button>
+                <button id="SeeAvailableEmergencies" onclick="window.location.href='/E-199/html/ConnectedVolunteer_AvailableEmergencies.html'">Volunteer for Emergencies</button>
+                <button id="AcceptedRequests" onclick="window.location.href='/E-199/html/ConnectedVolunteer_SeeAcceptedRequests.html'">Your accepted requests</button>
+            </div>
+        </div>
+        
+        <!-- footer -->
+        <footer id="footer"></footer>
+       
+        <!-- JavaScript files -->
+        <script src="/E-199/js/ConnectedVolunteer_InitialPage.js"></script>
+        <script src="/E-199/js/Volunteer_SessionTimeout.js"></script>
+        <script src="/E-199/js/footer.js"></script>
+    </body>
+</html>

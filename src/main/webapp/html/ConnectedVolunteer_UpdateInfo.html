@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Volunteer Info</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/E-199/css/Initial_Page.css">
+</head>
+<body>
+    <div class="menu">
+        <h1>Update Your Information</h1>
+        <h3>Kindly remind you that you cannot change your <strong>username</strong> or <strong>email</strong></h3>
+        <form id="updateForm" class="Form">
+            <!-- Loading message -->
+            <span id="LoadingMessage"></span> 
+           
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <span id="passwordDisplay">**************************</span>
+            <input type="password" id="password" name="password" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,18}" title="The password must be 8 characters minimum and 18 characters maximum. It also must contain at least one uppercase Latin letter, one number and one symbol." style="display: none;">
+            <button type="button" class="extraButtons EditButtons" data-target="password">Edit</button>
+            <br><br>
+            
+            <!-- Firstname -->
+            <label for="firstname">Firstname:</label>
+            <span id="firstnameDisplay">Evan</span>
+            <input type="text" id="firstname" name="firstname" pattern="[A-Za-zΑ-Ωα-ω]{3,30}" title="The name must contain from 3 to 30 characters and no numbers." placeholder="Babis" style="display: none;">
+            <button type="button" class="extraButtons EditButtons" data-target="firstname">Edit</button>
+            <br><br>
+            
+            <!-- Lastname -->
+            <label for="lastname">Lastname:</label>
+            <span id="lastnameDisplay">Fournier</span>
+            <input type="text" id="lastname" name="lastname" pattern="[A-Za-zΑ-Ωα-ω]{3,30}" title="The name must contain from 3 to 30 characters and no numbers." placeholder="Kostoulas" style="display: none;">
+            <button type="button" class="extraButtons EditButtons" data-target="lastname">Edit</button>
+            <br><br>
+            
+            <!-- Birth date -->
+            <label for="birthdate">Birthdate:</label>
+            <span id="birthdateDisplay">1990-05-12</span>
+            <input type="date" id="birthdate" name="birthdate" min="1920-01-01" max="2011-12-31" title="The birth date must be from 01-01-1920 to 31-12-2011" style="display: none;">
+            <button type="button" class="extraButtons EditButtons" data-target="birthdate">Edit</button>
+            <br><br>
+            
+            <!-- Gender -->
+            <label for="gender">Gender:</label>
+            <span id="genderDisplay">Male</span>
+            <select name="gender" id="gender" style="display: none;">
+                <option value="" style="display:none;">choose your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <button type="button" class="extraButtons EditButtons" data-target="gender">Edit</button>
+            <br><br>
+            
+            <!-- AFM -->
+            <label for="afm">AFM:</label>
+            <span id="afmDisplay">123456789</span>
+            <input type="text" id="afm" name="afm" pattern="[0-9]{10}" title="Your ΑΦΜ must contain 10 digits." placeholder="0123456789" style="display: none;">
+            <button type="button" class="extraButtons EditButtons" data-target="afm">Edit</button>
+            <br><br>
+            
+            <!-- Category -->
+            <label for="category">Firefighter's Category*</label>
+            <span id="categoryDisplay">Driver</span>
+            <select name="category" id="category" style="display: none;">
+                <option value="" style="display:none;">choose a category</option>
+                <option value="simple firefighter">simple firefighter</option>
+                <option value="driver">driver</option>
+            </select>
+            <button type="button" class="extraButtons EditButtons" data-target="category">Edit</button>
+            <br><br>
+
+            <!-- Height -->
+            <label for="height">Height*</label>
+            <span id="heightDisplay">1.90</span>
+            <input type="text" id="height" name="height" pattern="^(1\.4[5-9]|1\.[5-9][0-9]|2\.[0-1][0-9]|2\.2[0])$" title="the height must be from 1.45 to 2.20m." style="display: none;">
+            <button type="button" class="extraButtons EditButtons" data-target="height">Edit</button>
+            <br><br>
+            
+            <!-- Weight -->
+            <label for="weight">Weight*</label>
+            <span id="weightDisplay">90</span>
+            <input type="text" id="weight" name="weight" pattern="^(4[0-9]|[5-9][0-9]|1[0-5][0-9]|160)$" title="the weight must be from 40 to 160kg." style="display: none;">
+            <button type="button" class="extraButtons EditButtons" data-target="weight">Edit</button>
+            <br><br>
+            
+            <!-- Country -->
+            <label for="country">Country:</label>
+            <span id="countryDisplay">London</span>
+            <select name="country" id="country" style="display: none;">
+                <option value="" style="display: none;">country</option>
+                <option value="AF">Afghanistan</option>
+                <option value="AX">Åland Islands</option>
+                <option value="AL">Albania</option>
+                <option value="DZ">Algeria</option>
+                <option value="AS">American Samoa</option>
+                <option value="AD">Andorra</option>
+                <option value="AO">Angola</option>
+                <option value="AI">Anguilla</option>
+                <option value="AQ">Antarctica</option>
+                <option value="AG">Antigua and Barbuda</option>
+                <option value="AR">Argentina</option>
+                <option value="AM">Armenia</option>
+                <option value="AW">Aruba</option>
+                <option value="AU">Australia</option>
+                <option value="AT">Austria</option>
+                <option value="AZ">Azerbaijan</option>
+                <option value="BS">Bahamas</option>
+                <option value="BH">Bahrain</option>
+                <option value="BD">Bangladesh</option>
+                <option value="BB">Barbados</option>
+                <option value="BY">Belarus</option>
+                <option value="BE">Belgium</option>
+                <option value="BZ">Belize</option>
+                <option value="BJ">Benin</option>
+                <option value="BM">Bermuda</option>
+                <option value="BT">Bhutan</option>
+                <option value="BO">Bolivia (Plurinational State of)</option>
+                <option value="BA">Bosnia and Herzegovina</option>
+                <option value="BW">Botswana</option>
+                <option value="BV">Bouvet Island</option>
+                <option value="BR">Brazil</option>
+                <option value="IO">British Indian Ocean Territory</option>
+                <option value="BN">Brunei Darussalam</option>
+                <option value="BG">Bulgaria</option>
+                <option value="BF">Burkina Faso</option>
+                <option value="BI">Burundi</option>
+                <option value="CV">Cabo Verde</option>
+                <option value="KH">Cambodia</option>
+                <option value="CM">Cameroon</option>
+                <option value="CA">Canada</option>
+                <option value="BQ">Caribbean Netherlands</option>
+                <option value="KY">Cayman Islands</option>
+                <option value="CF">Central African Republic</option>
+                <option value="TD">Chad</option>
+                <option value="CL">Chile</option>
+                <option value="CN">China</option>
+                <option value="CX">Christmas Island</option>
+                <option value="CC">Cocos (Keeling) Islands</option>
+                <option value="CO">Colombia</option>
+                <option value="KM">Comoros</option>
+                <option value="CG">Congo</option>
+                <option value="CD">Congo, Democratic Republic of the</option>
+                <option value="CK">Cook Islands</option>
+                <option value="CR">Costa Rica</option>
+                <option value="HR">Croatia</option>
+                <option value="CU">Cuba</option>
+                <option value="CW">Curaçao</option>
+                <option value="CY">Cyprus</option>
+                <option value="CZ">Czech Republic</option>
+                <option value="CI">Côte d'Ivoire</option>
+                <option value="DK">Denmark</option>
+                <option value="DJ">Djibouti</option>
+                <option value="DM">Dominica</option>
+                <option value="DO">Dominican Republic</option>
+                <option value="EC">Ecuador</option>
+                <option value="EG">Egypt</option>
+                <option value="SV">El Salvador</option>
+                <option value="GQ">Equatorial Guinea</option>
+                <option value="ER">Eritrea</option>
+                <option value="EE">Estonia</option>
+                <option value="SZ">Eswatini (Swaziland)</option>
+                <option value="ET">Ethiopia</option>
+                <option value="FK">Falkland Islands (Malvinas)</option>
+                <option value="FO">Faroe Islands</option>
+                <option value="FJ">Fiji</option>
+                <option value="FI">Finland</option>
+                <option value="FR">France</option>
+                <option value="GF">French Guiana</option>
+                <option value="PF">French Polynesia</option>
+                <option value="TF">French Southern Territories</option>
+                <option value="GA">Gabon</option>
+                <option value="GM">Gambia</option>
+                <option value="GE">Georgia</option>
+                <option value="DE">Germany</option>
+                <option value="GH">Ghana</option>
+                <option value="GI">Gibraltar</option>
+                <option value="GR" selected>Greece</option>
+                <option value="GL">Greenland</option>
+                <option value="GD">Grenada</option>
+                <option value="GP">Guadeloupe</option>
+                <option value="GU">Guam</option>
+                <option value="GT">Guatemala</option>
+                <option value="GG">Guernsey</option>
+                <option value="GN">Guinea</option>
+                <option value="GW">Guinea-Bissau</option>
+                <option value="GY">Guyana</option>
+                <option value="HT">Haiti</option>
+                <option value="HM">Heard Island and Mcdonald Islands</option>
+                <option value="HN">Honduras</option>
+                <option value="HK">Hong Kong</option>
+                <option value="HU">Hungary</option>
+                <option value="IS">Iceland</option>
+                <option value="IN">India</option>
+                <option value="ID">Indonesia</option>
+                <option value="IR">Iran</option>
+                <option value="IQ">Iraq</option>
+                <option value="IE">Ireland</option>
+                <option value="IM">Isle of Man</option>
+                <option value="IL">Israel</option>
+                <option value="IT">Italy</option>
+                <option value="JM">Jamaica</option>
+                <option value="JP">Japan</option>
+                <option value="JE">Jersey</option>
+                <option value="JO">Jordan</option>
+                <option value="KZ">Kazakhstan</option>
+                <option value="KE">Kenya</option>
+                <option value="KI">Kiribati</option>
+                <option value="KP">Korea, North</option>
+                <option value="KR">Korea, South</option>
+                <option value="XK">Kosovo</option>
+                <option value="KW">Kuwait</option>
+                <option value="KG">Kyrgyzstan</option>
+                <option value="LA">Lao People's Democratic Republic</option>
+                <option value="LV">Latvia</option>
+                <option value="LB">Lebanon</option>
+                <option value="LS">Lesotho</option>
+                <option value="LR">Liberia</option>
+                <option value="LY">Libya</option>
+                <option value="LI">Liechtenstein</option>
+                <option value="LT">Lithuania</option>
+                <option value="LU">Luxembourg</option>
+                <option value="MO">Macao</option>
+                <option value="MK">Macedonia North</option>
+                <option value="MG">Madagascar</option>
+                <option value="MW">Malawi</option>
+                <option value="MY">Malaysia</option>
+                <option value="MV">Maldives</option>
+                <option value="ML">Mali</option>
+                <option value="MT">Malta</option>
+                <option value="MH">Marshall Islands</option>
+                <option value="MQ">Martinique</option>
+                <option value="MR">Mauritania</option>
+                <option value="MU">Mauritius</option>
+                <option value="YT">Mayotte</option>
+                <option value="MX">Mexico</option>
+                <option value="FM">Micronesia</option>
+                <option value="MD">Moldova</option>
+                <option value="MC">Monaco</option>
+                <option value="MN">Mongolia</option>
+                <option value="ME">Montenegro</option>
+                <option value="MS">Montserrat</option>
+                <option value="MA">Morocco</option>
+                <option value="MZ">Mozambique</option>
+                <option value="MM">Myanmar (Burma)</option>
+                <option value="NA">Namibia</option>
+                <option value="NR">Nauru</option>
+                <option value="NP">Nepal</option>
+                <option value="NL">Netherlands</option>
+                <option value="AN">Netherlands Antilles</option>
+                <option value="NC">New Caledonia</option>
+                <option value="NZ">New Zealand</option>
+                <option value="NI">Nicaragua</option>
+                <option value="NE">Niger</option>
+                <option value="NG">Nigeria</option>
+                <option value="NU">Niue</option>
+                <option value="NF">Norfolk Island</option>
+                <option value="MP">Northern Mariana Islands</option>
+                <option value="NO">Norway</option>
+                <option value="OM">Oman</option>
+                <option value="PK">Pakistan</option>
+                <option value="PW">Palau</option>
+                <option value="PS">Palestine</option>
+                <option value="PA">Panama</option>
+                <option value="PG">Papua New Guinea</option>
+                <option value="PY">Paraguay</option>
+                <option value="PE">Peru</option>
+                <option value="PH">Philippines</option>
+                <option value="PN">Pitcairn Islands</option>
+                <option value="PL">Poland</option>
+                <option value="PT">Portugal</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="QA">Qatar</option>
+                <option value="RE">Reunion</option>
+                <option value="RO">Romania</option>
+                <option value="RU">Russian Federation</option>
+                <option value="RW">Rwanda</option>
+                <option value="BL">Saint Barthelemy</option>
+                <option value="SH">Saint Helena</option>
+                <option value="KN">Saint Kitts and Nevis</option>
+                <option value="LC">Saint Lucia</option>
+                <option value="MF">Saint Martin</option>
+                <option value="PM">Saint Pierre and Miquelon</option>
+                <option value="VC">Saint Vincent and the Grenadines</option>
+                <option value="WS">Samoa</option>
+                <option value="SM">San Marino</option>
+                <option value="ST">Sao Tome and Principe</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="SN">Senegal</option>
+                <option value="RS">Serbia</option>
+                <option value="CS">Serbia and Montenegro</option>
+                <option value="SC">Seychelles</option>
+                <option value="SL">Sierra Leone</option>
+                <option value="SG">Singapore</option>
+                <option value="SX">Sint Maarten</option>
+                <option value="SK">Slovakia</option>
+                <option value="SI">Slovenia</option>
+                <option value="SB">Solomon Islands</option>
+                <option value="SO">Somalia</option>
+                <option value="ZA">South Africa</option>
+                <option value="GS">South Georgia and the South Sandwich Islands</option>
+                <option value="SS">South Sudan</option>
+                <option value="ES">Spain</option>
+                <option value="LK">Sri Lanka</option>
+                <option value="SD">Sudan</option>
+                <option value="SR">Suriname</option>
+                <option value="SJ">Svalbard and Jan Mayen</option>
+                <option value="SE">Sweden</option>
+                <option value="CH">Switzerland</option>
+                <option value="SY">Syria</option>
+                <option value="TW">Taiwan</option>
+                <option value="TJ">Tajikistan</option>
+                <option value="TZ">Tanzania</option>
+                <option value="TH">Thailand</option>
+                <option value="TL">Timor-Leste</option>
+                <option value="TG">Togo</option>
+                <option value="TK">Tokelau</option>
+                <option value="TO">Tonga</option>
+                <option value="TT">Trinidad and Tobago</option>
+                <option value="TN">Tunisia</option>
+                <option value="TR">Turkey (Türkiye)</option>
+                <option value="TM">Turkmenistan</option>
+                <option value="TC">Turks and Caicos Islands</option>
+                <option value="TV">Tuvalu</option>
+                <option value="UM">U.S. Outlying Islands</option>
+                <option value="UG">Uganda</option>
+                <option value="UA">Ukraine</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="GB">United Kingdom</option>
+                <option value="US">United States</option>
+                <option value="UY">Uruguay</option>
+                <option value="UZ">Uzbekistan</option>
+                <option value="VU">Vanuatu</option>
+                <option value="VA">Vatican City Holy See</option>
+                <option value="VE">Venezuela</option>
+                <option value="VN">Vietnam</option>
+                <option value="VG">Virgin Islands, British</option>
+                <option value="VI">Virgin Islands, U.S</option>
+                <option value="WF">Wallis and Futuna</option>
+                <option value="EH">Western Sahara</option>
+                <option value="YE">Yemen</option>
+                <option value="ZM">Zambia</option>
+                <option value="ZW">Zimbabwe</option>
+            </select>
+            <button type="button" class="extraButtons EditButtons" data-target="country">Edit</button>
+            <br><br>
+            
+            <!-- Municipality -->
+            <label for="municipality">Municipality:</label>
+            <span id="municipalityDisplay">Athens</span>
+            <input type="text" id="municipality" name="municipality" pattern="[A-Za-zΑ-Ωα-ω]{3,30}" title="Please write your municipality of residence." placeholder="Argous" style="display: none;">
+            <button type="button" class="extraButtons EditButtons" data-target="municipality">Edit</button>
+            <br><br>
+
+            <!-- Prefecture -->
+            <label for="prefecture">Prefecture:</label>
+            <span id="prefectureDisplay">Attica</span>
+            <select name="prefecture" id="prefecture" style="display: none;">
+                <option value="" style="display: none;">chooce a prefecture</option>
+                <option value="Chania">Chania</option>
+                <option value="Rethymno">Rethymno</option>
+                <option value="Heraklion">Heraklion</option>
+                <option value="Agios-Nikolaos">Agios Nikolaos</option>
+            </select>
+            <button type="button" class="extraButtons EditButtons" data-target="prefecture">Edit</button>
+            <br><br>
+            
+            <!-- Address -->
+            <label for="address">Address:</label>
+            <span id="addressDisplay">Avenue Street 68</span>
+            <input type="text" id="address" name="address" pattern=".{10,150}" title="Please write your home address." style="display: none;">
+            <button type="button" class="extraButtons EditButtons" data-target="address">Edit</button>
+            <br><br>
+            
+            <!-- Job -->
+            <label for="job">Job:</label>
+            <span id="jobDisplay">Engineer</span>
+            <input type="text" id="job" name="job" pattern="^.{3,30}" title="Please write your occupation." placeholder="Γεωπόνος" style="display: none;">
+            <button type="button" class="extraButtons EditButtons" data-target="job">Edit</button>
+            <br><br>
+            
+            <!-- Telephone -->
+            <label for="telephone">Telephone:</label>
+            <span id="telephoneDisplay">1234567890</span>
+            <input type="text" id="telephone" name="telephone" pattern="[0-9]{10}" title="Please write your phone number (10 digits)." placeholder="0123456789" style="display: none;">
+            <span id="check_telephone_message"></span>
+            <button type="button" class="extraButtons EditButtons" data-target="telephone">Edit</button>
+            <br><br>
+         
+            <button type="submit" class="extraButtons">Update</button>
+            <span id="UpdateMessage"></span>
+        </form>
+    </div>
+    
+    <!-- JavaScript files -->
+    <script src="/E-199/js/ConnectedVolunteer_UpdateInfo.js"></script>
+    <script src="/E-199/js/Volunteer_SessionTimeout.js"></script>
+</body>
+</html>

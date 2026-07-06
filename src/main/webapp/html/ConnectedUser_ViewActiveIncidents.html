@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User views all active incidents</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <link rel="stylesheet" href="/E-199/css/Initial_Page.css">
+    </head>
+    <body>
+        <div class="menu">
+            <h1>Active Incidents</h1>
+            <h3>Below you can find all the active incidents in the range of 30 kilometers from your address</h3>
+            
+            <div class="menu2">
+                <div id="ActiveIncidentsMap" class="Maps"></div>
+                
+                <div id="ActiveIncidents" class="List">
+                    <ul id="ActiveIncidentsList"></ul>
+                </div>
+                
+                <h1 id="ErrorMessage" style="color: red; display: none;">Error</h1>
+            </div> 
+        </div>
+
+                <!-- Leaflet JavaScript file -->
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        
+        <!-- JavaScript files -->
+        <script src="/E-199/js/ConnectedUser_ViewActiveIncidents.js"></script>
+        <script src="/E-199/js/UserSessionTimeout.js"></script>
+    </body>
+</html>
