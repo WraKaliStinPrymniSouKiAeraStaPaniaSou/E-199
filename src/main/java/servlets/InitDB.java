@@ -46,10 +46,11 @@ public class InitDB extends HttpServlet {
             // Set status 200!
             response.setStatus(HttpServletResponse.SC_OK);
         } catch (SQLException ex) {
-            response.sendError(500);
-            Logger.getLogger(InitDB.class.getName()).log(Level.SEVERE, null, ex);
+            response.sendError(500, "InitDB failed: " + ex.getMessage());
+            Logger.getLogger(InitDB.class.getName()).log(Level.SEVERE, "InitDB SQL error", ex);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(InitDB.class.getName()).log(Level.SEVERE, null, ex);
+            response.sendError(500, "InitDB failed: " + ex.getMessage());
+            Logger.getLogger(InitDB.class.getName()).log(Level.SEVERE, "InitDB class error", ex);
         }
     }
 

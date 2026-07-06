@@ -135,7 +135,7 @@ public class EditIncidentsTable {
     public void createIncidentsTable() throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
-        String sql = "CREATE TABLE incidents "
+        String sql = "CREATE TABLE IF NOT EXISTS incidents "
                 + "(incident_id INTEGER not NULL AUTO_INCREMENT, "
                 + "incident_type VARCHAR(10) not null,"
                 + "description VARCHAR(100) not null,"

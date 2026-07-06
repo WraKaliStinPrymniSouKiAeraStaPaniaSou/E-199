@@ -80,7 +80,7 @@ public class EditParticipantsTable {
     public void createParticipantTable() throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
-        String sql = "CREATE TABLE participants "
+        String sql = "CREATE TABLE IF NOT EXISTS participants "
                 + "(participant_id INTEGER not NULL AUTO_INCREMENT, "
                 + " incident_id INTEGER not NULL, "
                 + " volunteer_username VARCHAR(30), "

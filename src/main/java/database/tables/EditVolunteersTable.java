@@ -141,7 +141,7 @@ public class EditVolunteersTable {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
-        String query = "CREATE TABLE volunteers "
+        String query = "CREATE TABLE IF NOT EXISTS volunteers "
                   + "(volunteer_id INTEGER not NULL AUTO_INCREMENT, "
                 + "    username VARCHAR(30) not null unique,"
                 + "    email VARCHAR(50) not null unique,	"

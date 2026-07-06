@@ -66,7 +66,7 @@ public class EditMessagesTable {
     public void createMessageTable() throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
-        String sql = "CREATE TABLE messages "
+        String sql = "CREATE TABLE IF NOT EXISTS messages "
                 + "(message_id INTEGER not NULL AUTO_INCREMENT, "
                 + "incident_id INTEGER not NULL, "
                 + "message VARCHAR(400) not NULL, "

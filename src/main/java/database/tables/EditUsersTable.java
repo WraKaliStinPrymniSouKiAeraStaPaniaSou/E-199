@@ -97,7 +97,7 @@ public class EditUsersTable {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
-        String query = "CREATE TABLE users "
+        String query = "CREATE TABLE IF NOT EXISTS users "
                 + "(user_id INTEGER not NULL AUTO_INCREMENT, "
                 + "    username VARCHAR(30) not null unique,"
                 + "    email VARCHAR(50) not null unique,	"
