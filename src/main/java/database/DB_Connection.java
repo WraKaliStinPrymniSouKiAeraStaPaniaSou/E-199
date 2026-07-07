@@ -22,12 +22,12 @@ public class DB_Connection {
 
     
     public static Connection getConnection() throws SQLException, ClassNotFoundException {
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(url + ":" + port + "/" + databaseName, username, password);
     }
     
     public static Connection getInitialConnection() throws SQLException, ClassNotFoundException {
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(url + ":" + port, username, password);
     }
     

@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS volunteers (
     telephone VARCHAR(14) NOT NULL UNIQUE,
     lat DOUBLE,
     lon DOUBLE,
-    volunteer_type VARCHAR(10) NOT NULL,
+    volunteer_type VARCHAR(50) NOT NULL,
     height DOUBLE,
     weight DOUBLE,
     PRIMARY KEY (volunteer_id)
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS participants (
     participant_id INTEGER NOT NULL AUTO_INCREMENT,
     incident_id INTEGER NOT NULL,
     volunteer_username VARCHAR(30),
-    volunteer_type VARCHAR(10) NOT NULL,
+    volunteer_type VARCHAR(50) NOT NULL,
     status VARCHAR(15) NOT NULL,
     success VARCHAR(10),
     comment VARCHAR(300),

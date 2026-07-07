@@ -159,7 +159,7 @@ public class EditVolunteersTable {
                 + "    telephone VARCHAR(14) not null unique,"
                   + "    lat DOUBLE,"
                 + "    lon DOUBLE,"
-                + "    volunteer_type VARCHAR(10) not null,"
+                + "    volunteer_type VARCHAR(50) not null,"
                 + "    height DOUBLE,"
                 + "    weight DOUBLE,"
                 + " PRIMARY KEY (volunteer_id))";

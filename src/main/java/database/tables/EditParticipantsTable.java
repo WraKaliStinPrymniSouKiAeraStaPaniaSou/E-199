@@ -84,7 +84,7 @@ public class EditParticipantsTable {
                 + "(participant_id INTEGER not NULL AUTO_INCREMENT, "
                 + " incident_id INTEGER not NULL, "
                 + " volunteer_username VARCHAR(30), "
-                + " volunteer_type VARCHAR(10) not null, "
+                + " volunteer_type VARCHAR(50) not null, "
                 + " status VARCHAR(15) not null, "
                 + " success VARCHAR(10), "
                 + " comment VARCHAR(300), "
