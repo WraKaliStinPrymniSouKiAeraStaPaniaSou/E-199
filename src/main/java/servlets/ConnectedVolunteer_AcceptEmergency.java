@@ -68,12 +68,20 @@ public class ConnectedVolunteer_AcceptEmergency extends HttpServlet {
             // Take the volunteer_type through volunteers_DAO
             volunteers_DAO vDAO = new volunteers_DAO();
             Volunteer volunteer = vDAO.GetVolunteerByUsername(username);
+            if (volunteer == null) {
+                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                result.write("{\"success\": false, \"message\": \"Volunteer not found!\"}");
+                return;
+            }
             String volunteer_type = volunteer.getVolunteer_type();
             System.out.println("volunteer_type: " +volunteer_type);
             
-            // Update the participant 
             participants_DAO pDAO = new participants_DAO();
             boolean success = pDAO.UpdateParticipant(incident_id, username, volunteer_type);
+            if (!success) {
+                pDAO.AddParticipantsToDatabase(incident_id, 1);
+                success = pDAO.UpdateParticipant(incident_id, username, volunteer_type);
+            }
             if (success) {
                 result.write("{\"success\": true, \"message\": \"Participant updated successfully!\"}");
             } else {

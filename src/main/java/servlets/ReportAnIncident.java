@@ -2,6 +2,7 @@ package servlets;
 
 import com.google.gson.Gson;
 import database.tables.incidents_DAO;
+import database.tables.participants_DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -101,7 +102,10 @@ public class ReportAnIncident extends HttpServlet {
             System.out.println("Inserting Incident: " + incident);
             
             incidents_DAO incidentDAO = new incidents_DAO();
-            incidentDAO.InsertIncident(incident);
+            int incident_id = incidentDAO.InsertIncident(incident);
+            
+            participants_DAO pDAO = new participants_DAO();
+            pDAO.AddParticipantsToDatabase(incident_id, 3);
             
             response.setStatus(HttpServletResponse.SC_OK);
             result.write("{\"success\": true, \"message\": \"Incident reported successfully!\"}");

@@ -24,14 +24,14 @@
             <!-- Firstname -->
             <label for="firstname">Firstname:</label>
             <span id="firstnameDisplay">FirstName</span>
-            <input type="text" id="firstname" name="firstname" pattern="[A-Za-zΑ-Ωα-ω]{3,30}" title="The name must contain from 3 to 30 characters and no numbers." placeholder="FirstName" style="display: none;">
+            <input type="text" id="firstname" name="firstname" pattern=".{3,50}" title="The name must contain from 3 to 30 characters and no numbers." placeholder="FirstName" style="display: none;">
             <button type="button" class="extraButtons EditButtons" data-target="firstname">Edit</button>
             <br><br>
             
             <!-- Lastname -->
             <label for="lastname">Lastname:</label>
             <span id="lastnameDisplay">LastName</span>
-            <input type="text" id="lastname" name="lastname" pattern="[A-Za-zΑ-Ωα-ω]{3,30}" title="The name must contain from 3 to 30 characters and no numbers." placeholder="LastName" style="display: none;">
+            <input type="text" id="lastname" name="lastname" pattern=".{3,50}" title="The name must contain from 3 to 30 characters and no numbers." placeholder="LastName" style="display: none;">
             <button type="button" class="extraButtons EditButtons" data-target="lastname">Edit</button>
             <br><br>
             
@@ -350,7 +350,7 @@
             <!-- Municipality -->
             <label for="municipality">Municipality:</label>
             <span id="municipalityDisplay">Athens</span>
-            <input type="text" id="municipality" name="municipality" pattern="[A-Za-zΑ-Ωα-ω]{3,30}" title="Please write your municipality of residence." placeholder="Municipality" style="display: none;">
+            <input type="text" id="municipality" name="municipality" pattern=".{3,50}" title="Please write your municipality of residence." placeholder="Municipality" style="display: none;">
             <button type="button" class="extraButtons EditButtons" data-target="municipality">Edit</button>
             <br><br>
 
@@ -370,7 +370,7 @@
             <!-- Address -->
             <label for="address">Address:</label>
             <span id="addressDisplay">Avenue Street 68</span>
-            <input type="text" id="address" name="address" pattern=".{10,150}" title="Please write your home address." style="display: none;">
+            <input type="text" id="address" name="address" pattern=".{5,150}" title="Please write your home address." style="display: none;">
             <button type="button" class="extraButtons EditButtons" data-target="address">Edit</button>
             <br><br>
             

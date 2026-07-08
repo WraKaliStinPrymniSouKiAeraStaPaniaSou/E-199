@@ -12,7 +12,7 @@
         <form id="form" class="Form" action="#">
             <!-- Username -->
             <label for="username">Username*</label>
-            <input type="text" id="username" name="username" pattern="^[A-Za-z][A-Za-z0-9]{8,}$" minlength="8" title="The username must contain at least 8 characters (Latin characters) that must never start with a number or symbol." required>
+            <input type="text" id="username" name="username" pattern="^[A-Za-z][A-Za-z0-9.]{8,}$" minlength="8" title="The username must contain at least 8 characters (Latin characters) that must never start with a number or symbol." required>
             <span id="check_Username_Message"></span>
             
             <!-- email -->
@@ -38,11 +38,11 @@
 
             <!-- First name -->
             <label for="name">Firstname*</label>
-            <input type="text" id="firstname" name="firstname" pattern="[A-Za-zΑ-Ωα-ω]{3,30}" title="The name must contain from 3 to 30 characters and no numbers." placeholder="FirstName" required>
+            <input type="text" id="firstname" name="firstname" pattern=".{3,50}" title="The name must contain from 3 to 30 characters and no numbers." placeholder="FirstName" required>
 
             <!-- Last name -->
             <label for="name">Lastname*</label>
-            <input type="text" id="lastname" name="lastname" pattern="[A-Za-zΑ-Ωα-ω]{3,30}" title="The name must contain from 3 to 30 characters and no numbers." placeholder="LastName" required>
+            <input type="text" id="lastname" name="lastname" pattern=".{3,50}" title="The name must contain from 3 to 30 characters and no numbers." placeholder="LastName" required>
 
             <!-- Birth date -->
             <label for="date">Birth Date*</label>
@@ -331,11 +331,11 @@
 
             <!-- Municipality of Residence -->
             <label for="municipality">Municipality*</label>
-            <input type="text" name="municipality" id="municipality" pattern="[A-Za-zΑ-Ωα-ω]{3,30}" title="Please write your municipality of residence." placeholder="Municipality" required>
+            <input type="text" name="municipality" id="municipality" pattern=".{3,50}" title="Please write your municipality of residence." placeholder="Municipality" required>
 
             <!-- Home Address -->
             <label for="address">Address*</label>
-            <input type="text" name="address" id="address" pattern=".{10,150}" title="Please write your home address." required>
+            <input type="text" name="address" id="address" pattern=".{5,150}" title="Please write your home address." required>
      
             <!-- Occupation -->
             <label for="Occupation">Occupation*</label>

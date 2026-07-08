@@ -162,17 +162,20 @@ button:active {
 }
 
 #JSON_results {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 5%;
+    margin-right: 5%;
     height: auto;
+    max-height: 400px;
+    overflow-y: auto;
     text-align: left;
-    padding: 1%;
+    padding: 15px;
     background-color: rgb(38, 22, 3);
     color: rgb(207, 108, 50);
-    border-top-left-radius: 3%;
-    border-bottom-left-radius: 3%; 
-    border-top-right-radius: 3%;
-    border-bottom-right-radius: 3%;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 
 select {

@@ -47,7 +47,7 @@ public class Admin_Login extends HttpServlet {
         String adminUser = System.getenv("ADMIN_USER");
         String adminPass = System.getenv("ADMIN_PASS");
         if (adminUser == null) adminUser = "admin";
-        if (adminPass == null) adminPass = "admiN12@*";
+        if (adminPass == null) adminPass = "K9mP2vLx7!";
 
         if (adminUser.equals(username) && adminPass.equals(password)) {
             AdminSession = request.getSession(true);

@@ -138,7 +138,7 @@ public class EditIncidentsTable {
         String sql = "CREATE TABLE IF NOT EXISTS incidents "
                 + "(incident_id INTEGER not NULL AUTO_INCREMENT, "
                 + "incident_type VARCHAR(10) not null,"
-                + "description VARCHAR(100) not null,"
+                + "description VARCHAR(1000) not null,"
                 + "user_phone VARCHAR(14) not null,"
                 + "user_type VARCHAR(10)  not null, "
                 + "address VARCHAR(100) not null,"

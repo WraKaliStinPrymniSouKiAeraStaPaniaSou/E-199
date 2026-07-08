@@ -5,15 +5,28 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import mainClasses.Participant;
 
 public class participants_DAO {
     private final Connection connection;
+    private static boolean columnFixed = false;
     
     public participants_DAO() throws SQLException, ClassNotFoundException {
         this.connection = DB_Connection.getConnection();
+        ensureVolunteerTypeColumn();
+    }
+    
+    private void ensureVolunteerTypeColumn() throws SQLException {
+        if (columnFixed) return;
+        try (Statement stmt = connection.createStatement()) {
+            stmt.execute("ALTER TABLE participants MODIFY volunteer_type VARCHAR(50) NOT NULL");
+            columnFixed = true;
+        } catch (SQLException e) {
+            System.err.println("Warning: could not widen volunteer_type column: " + e.getMessage());
+        }
     }
     
     public boolean AddParticipantsToDatabase(int incident_id, int positions) throws SQLException {

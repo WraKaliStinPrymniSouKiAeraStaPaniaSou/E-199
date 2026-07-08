@@ -111,7 +111,8 @@ async function handleAcceptIncident(incident_id) {
         });
         
         if (!response.ok) {
-            console.error("The response from the server was invalid!");
+            const errText = await response.text();
+            console.error("Server error:", errText);
             accept_message.textContent = "Error updating your acceptance. Please try again later!";
             accept_message.style.color = "red";
         } else {

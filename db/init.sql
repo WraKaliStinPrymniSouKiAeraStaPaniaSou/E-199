@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS volunteers (
 CREATE TABLE IF NOT EXISTS incidents (
     incident_id INTEGER NOT NULL AUTO_INCREMENT,
     incident_type VARCHAR(10) NOT NULL,
-    description VARCHAR(100) NOT NULL,
+    description VARCHAR(1000) NOT NULL,
     user_phone VARCHAR(14) NOT NULL,
     user_type VARCHAR(10) NOT NULL,
     address VARCHAR(100) NOT NULL,

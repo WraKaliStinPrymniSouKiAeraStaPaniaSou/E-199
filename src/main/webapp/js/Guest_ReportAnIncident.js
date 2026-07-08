@@ -1,24 +1,21 @@
-async function IsAddressReal(FullAddress) {
+async function IsAddressReal(FullAddress, fallback) {
     event.preventDefault();
     
-    const URL = `https://forward-reverse-geocoding.p.rapidapi.com/v1/search?q=${encodeURIComponent(FullAddress)}&acceptlanguage=en&polygon_threshold=0.0`;
+    async function trySearch(query) {
+        const URL = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=1`;
+        const resp = await fetch(URL);
+        if (!resp.ok) return null;
+        const data = await resp.json();
+        return (data && data.length > 0) ? data[0] : null;
+    }
     
     try {
-        const response = await fetch(URL, {
-            method: "GET",
-            headers: {
-                "x-rapidapi-host": "forward-reverse-geocoding.p.rapidapi.com",
-                "x-rapidapi-key": "5e54dc8cfdmsh76317abe7f63e43p1dfe78jsn5275c0429be6"
-            }
-        });
-
-        if (!response.ok) {
-            throw new Error("Address check failed!");
+        let result = await trySearch(FullAddress);
+        if (!result && fallback) {
+            result = await trySearch(fallback);
         }
-        
-        const result = await response.json();
-        if (result && result.length > 0) {
-            return { success: true, lat: parseFloat(result[0].lat), lon: parseFloat(result[0].lon) };
+        if (result) {
+            return { success: true, lat: parseFloat(result.lat), lon: parseFloat(result.lon) };
         } else {
             return { success: false, message: "Could not find the address!" };
         }
@@ -42,8 +39,9 @@ async function InsertIncident(event) {
     const municipality = document.getElementById("municipality").value.trim();
     const country = "Ελλάδα";
     const FullAddress = `${address} ${municipality} ${country}`;
+    const fallback = `${municipality} ${country}`;
     
-    const VerifyAddress = await IsAddressReal(FullAddress);
+    const VerifyAddress = await IsAddressReal(FullAddress, fallback);
     console.log(VerifyAddress);
     if (!VerifyAddress.success) {
         console.log("Error in verifying address!");

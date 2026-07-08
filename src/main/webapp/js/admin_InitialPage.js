@@ -10,7 +10,7 @@ async function checkLogin() {
     
     try {
         // Send GET request to server.
-        const response = await fetch(`/E-199/Admin_Login?username=${form_data.username}&password=${form_data.password}`, {
+        const response = await fetch(`/E-199/Admin_Login?username=${encodeURIComponent(form_data.username)}&password=${encodeURIComponent(form_data.password)}`, {
            method: 'GET',
            headers: {'Content-Type': 'application/json'}
         });

@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,15 +14,27 @@ import mainClasses.Incident;
 
 public class incidents_DAO {
     private final Connection connection;
+    private static boolean descriptionFixed = false;
 
     public incidents_DAO() throws SQLException, ClassNotFoundException {
         this.connection = DB_Connection.getConnection();
+        ensureDescriptionColumn();
     }
 
-    public void InsertIncident(Incident incident) throws SQLException {
+    private void ensureDescriptionColumn() throws SQLException {
+        if (descriptionFixed) return;
+        try (Statement stmt = connection.createStatement()) {
+            stmt.execute("ALTER TABLE incidents MODIFY description VARCHAR(1000) NOT NULL");
+            descriptionFixed = true;
+        } catch (SQLException e) {
+            System.err.println("Warning: could not widen description column: " + e.getMessage());
+        }
+    }
+
+    public int InsertIncident(Incident incident) throws SQLException {
         String query = "INSERT INTO incidents (incident_type, description, user_phone, user_type, address, lat, lon, municipality, prefecture, start_datetime, end_datetime, danger, status, finalResult, vehicles, firemen) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-        try (PreparedStatement statement = connection.prepareStatement(query)) {
+        try (PreparedStatement statement = connection.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, incident.getIncident_type());
             statement.setString(2, incident.getDescription());
             statement.setString(3, incident.getUser_phone());
@@ -39,6 +52,12 @@ public class incidents_DAO {
             statement.setInt(15, incident.getVehicles());
             statement.setInt(16, incident.getFiremen());
             statement.executeUpdate();
+            try (ResultSet keys = statement.getGeneratedKeys()) {
+                if (keys.next()) {
+                    return keys.getInt(1);
+                }
+                throw new SQLException("Inserting incident failed, no ID obtained.");
+            }
         }
     }
 
